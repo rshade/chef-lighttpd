@@ -6,6 +6,8 @@ description      "Installs/Configures Lighttpd"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "0.3.0"
 
+depends "yum"
+
 recipe "lighttpd::default", "default recipe"
 recipe "lighttpd::mod_auth", "mod_auth recipe"
 recipe "lighttpd::mod_cgi", "mod_cgi recipe"
