@@ -47,6 +47,13 @@ case node[:platform]
   action :enable
 end
 
+directory "/usr/share/lighttpd" do
+  owner "root"
+  group "root"
+  mode 0755
+  action :create
+end
+
 cookbook_file "/usr/share/lighttpd/include-sites-enabled.pl" do
   source "include-sites-enabled.pl"
   mode 0755
